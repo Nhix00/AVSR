@@ -1,0 +1,38 @@
+dataset:
+  raw_dir: "dataset"
+  train_file: "dataset_train.npz"
+  val_file: "dataset_val.npz"
+  test_file: "dataset_test.npz"
+  noise_file: "cafe_sound.wav"
+  max_frames: 30
+  target_length: 31000
+  num_classes: 10
+  class_map:
+    avvia: 0
+    stop: 1
+    sopra: 2
+    sotto: 3
+    sinistra: 4
+    destra: 5
+    apri: 6
+    chiudi: 7
+    si: 8
+    sì: 8  # Italian accent variant — both map to class 8
+    "no": 9
+
+audio:
+  sample_rate: 16000
+  n_mfcc: 13
+
+video:
+  fps: 15
+
+model:
+  lstm_units: 64
+  epochs: 100
+  batch_size: 32
+  patience: 15
+
+inference:
+  mode: "fusion"
+  record_seconds: 2.0
