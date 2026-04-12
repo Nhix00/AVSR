@@ -158,10 +158,12 @@ evaluation_log.txt
 *.keras
 *.pkl
 
-# Exception for report assets
+# Exception for report and presentation assets
 !report/assets/*.png
 !report/assets/*.jpg
 !report/assets/*.svg
+!presentation/assets/*.png
+!presentation/assets/*.jpg
 
 # LaTeX
 *.aux
@@ -175,3 +177,5 @@ evaluation_log.txt
 *.synctex.gz
 *.toc
 *.fdb_latexmk
+*.nav
+*.snm
